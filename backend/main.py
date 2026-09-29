@@ -16,7 +16,7 @@ app = FastAPI(
 )
 
 # Enable CORS for frontend consumption
-origins = os.getenv("ALLOWED_ORIGINS", "*").split(",")
+origins = os.getenv("ALLOWED_ORIGINS", "https://diabetes-predictor-gilt.vercel.app/").split(",")
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
